@@ -5,13 +5,13 @@
 ## 📖 Project Overview
 The primary objective of this project is to master incident management lifecycles by **intentionally introducing faults** into an Enterprise-style **Collapsed Core** network topology and systematically resolving them.
 
-The lab focuses on the detection, diagnosis, and resolution of connectivity issues using standard industry protocols and Cisco IOS diagnostic tools.
+The lab focuses on the detection, diagnosis, and resolution of connectivity issues using standard industry protocols and Cisco IOS–style diagnostic commands (implemented in Packet Tracer).
 
 ## 🏗️ Network Topology
 *(topology diagram here)*
 
 **Architecture Summary:**
-* **Collapsed Core Layer:** Layer 3 switch performing inter-VLAN routing via SVIs and acting as the campus aggregation point.
+* **Collapsed Core (Distribution) Layer:** Two Layer 3 switches performing inter-VLAN routing via SVIs and providing a redundant campus aggregation point.
 * **Access Layer:** Layer 2 switches connecting end hosts using VLAN segmentation and trunk uplinks.
 * **Endpoints:** PCs and servers simulating traffic sources across multiple VLANs.
 
