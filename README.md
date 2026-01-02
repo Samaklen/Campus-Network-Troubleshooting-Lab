@@ -1,16 +1,21 @@
 # Network Operations, Monitoring, and Troubleshooting Lab
 
-![Network Status](https://img.shields.io/badge/Status-work_in_progress-yellow) ![Platform](https://img.shields.io/badge/Platform-Cisco_Packet_Tracer-blue)
+![Network Status](https://img.shields.io/badge/Status-Work_In_Progress-yellow) ![Platform](https://img.shields.io/badge/Platform-Cisco_Packet_Tracer-blue)
 
 ## 📖 Project Overview
-The primary objective of this project is to master incident management lifecycles by **intentionally introducing faults** into an Enterprise-style **Collapsed Core** network topology and systematically resolving them.
+The primary objective of this project is to master incident management lifecycles by **intentionally introducing faults** into an Campus-style **Collapsed Core** network topology and systematically resolving them.
 
 The lab focuses on the detection, diagnosis, and resolution of connectivity issues using standard industry protocols and Cisco IOS–style diagnostic commands (implemented in Packet Tracer).
 
-## 🏗️ Network Topology
-*(topology diagram here)*
+## 🏗️ Network Topology 
+  ![Network Topology Diagram](./img/topology.png)
 
 **Architecture Summary:**
+* **Network & End Devices:** 
+  *  PCs 
+  *  Servers
+  *  2 Cisco 2960 switches
+  *  2 Cisco 3560-24PS multilayer switches
 * **Collapsed Core (Distribution) Layer:** Two Layer 3 switches performing inter-VLAN routing via SVIs and providing a redundant campus aggregation point.
 * **Access Layer:** Layer 2 switches connecting end hosts using VLAN segmentation and trunk uplinks.
 * **Endpoints:** PCs and servers simulating traffic sources across multiple VLANs.
@@ -62,6 +67,6 @@ The resolution process followed a strict 4-step diagnostic workflow:
 │   └── final_resolved_config/   # Clean, working configurations
 ├── logs/
 │   └── troubleshooting_logs.txt # Capture of CLI sessions and show commands
-├── images/
+├── img/
 │   └── topology_diagram.png     # Visual map of the network
 └── README.md
