@@ -7,8 +7,9 @@ The primary objective of this project is to master incident management lifecycle
 
 The lab focuses on the detection, diagnosis, and resolution of connectivity issues using standard industry protocols and Cisco IOS–style diagnostic commands (implemented in Packet Tracer).
 
-## 🏗️ Network Topology 
-  ![Network Topology Diagram](./img/topology.png)
+## 🏗️ Network Topology
+
+![Network Topology Diagram](./img/topology.png)
 
 **Architecture Summary:**
 * **Network & End Devices:** 
@@ -20,8 +21,13 @@ The lab focuses on the detection, diagnosis, and resolution of connectivity issu
 * **Access Layer:** Layer 2 switches connecting end hosts using VLAN segmentation and trunk uplinks.
 * **Endpoints:** PCs and servers simulating traffic sources across multiple VLANs.
 
+### **Before going further, please try to do the lab (lab.pkt) to practice troubleshooting.
+
+
 ## ⚡ Simulated Fault Scenarios
 To replicate production incidents, the following faults were injected into the network components:
+
+  ![Network Topology Diagram](./img/fault_scenarios.png)
 
 ### Layer 1: Physical Layer
 * **Interface Shutdowns:** Administratively down interfaces on uplinks to simulate cable breaks.
@@ -59,14 +65,3 @@ The resolution process followed a strict 4-step diagnostic workflow:
 | **L2** | Intra-VLAN fail | `show vlan` | Port assigned to Default VLAN 1 instead of VLAN 10. | `switchport access vlan 10`. |
 | **L2** | Inter-switch fail | `show int trunk` | Native VLAN mismatch (1 vs 99). | Configured `switchport trunk native vlan 99` on both ends. |
 | **L3** | Destination Unreachable | `show ip route` | Core Switch missing route to Server subnet. | Added `ip route 192.168.20.0 255.255.255.0 [Next-Hop]`. |
-
-## 📂 Repository Structure
-```text
-├── configs/
-│   ├── initial_faulty_config/   # Configurations with injected errors
-│   └── final_resolved_config/   # Clean, working configurations
-├── logs/
-│   └── troubleshooting_logs.txt # Capture of CLI sessions and show commands
-├── img/
-│   └── topology_diagram.png     # Visual map of the network
-└── README.md
