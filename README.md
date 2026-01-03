@@ -39,8 +39,8 @@ To replicate production incidents, the following faults were injected into the n
 
 ### Layer 3: Network Layer
 * **Gateway Errors:** End hosts configured with incorrect default gateways (pointing to wrong SVI IP).
-* **Routing Logic:** Missing static routes on the Core Switches pointing to external networks or specific subnets.
-* **SVI Misconfiguration:** Switched Virtual Interfaces (SVI) configured with incorrect IP masks, causing subnet overlap.
+
+* **SVI Misconfiguration:** Switched Virtual Interface (SVI) configured with incorrect IP.
 
 ## 🔍 Troubleshooting Methodology
 The resolution process followed a strict 4-step diagnostic workflow:
