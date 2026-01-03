@@ -1,4 +1,4 @@
-# Network Operations, Monitoring, and Troubleshooting Lab
+# Campus Network Troubleshooting Lab
 
 ![Network Topology Status](https://img.shields.io/badge/Status-Complete-success) ![Platform](https://img.shields.io/badge/Platform-Cisco_Packet_Tracer-blue)
 
